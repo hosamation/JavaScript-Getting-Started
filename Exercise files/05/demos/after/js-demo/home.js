@@ -32,4 +32,47 @@
 // let secretCode = getSecretCode(2);
 // showMessage(secretCode);
 
-changePercentoff(30);
+// changePercentoff(30);
+
+// let mySymbol = Symbol();
+
+// let person = {
+//   name: "John",
+//   age: 32,
+//   partTime: false,
+//   [mySymbol]: "secretInformation",
+//   showInfo: function(realAge) {
+//     showMessage(`${this.name} is ${realAge}`);
+//   }
+// };
+
+// person.age = 33;
+// person["age"] = 34;
+// showMessage(person.age)
+// showMessage(typeof person.showInfo)
+
+// function increementAge(p) {
+//   p.age++;
+// }
+// increementAge(person);
+// showMessage(person.age);
+
+// let s = "Hello"; 
+// showMessage(s.charAt(1));
+
+// const header = document.getElementById("message");
+// header.style.fontWeight = "800";
+
+const button = document.getElementById("see-review");
+
+button.addEventListener("click", function(){
+  const review = document.getElementById("review");
+  if(review.classList.contains("d-none")) {
+    review.classList.remove("d-none");
+    button.textContent = "Close REVIEW";
+  } else {
+    review.classList.add("d-none");
+    button.textContent = "SEE REVIEW";
+  }
+  // console.log("click");
+});
