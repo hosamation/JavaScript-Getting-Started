@@ -79,51 +79,74 @@
 
 // ## Start Array ##
 
-const values = ["a", "b", "c"];
-values[0] = "aaa";
-console.log(values);
-console.log(typeof values);
-console.log(values[0]);
-console.log(values[1]);
-console.log(values[2]);
-console.log(values[7]);
+// const values = ["a", "b", "c"];
+// values[0] = "aaa";
+// console.log(values);
+// console.log(typeof values);
+// console.log(values[0]);
+// console.log(values[1]);
+// console.log(values[2]);
+// console.log(values[7]);
 
-const last = values.pop();
-console.log(last);  //c
+// const last = values.pop();
+// console.log(last);  //c
 
-const first = values.shift();
-console.log(first);  //a
+// const first = values.shift();
+// console.log(first);  //a
 
-// values.unshift("hello");
-console.log(values);
+// // values.unshift("hello");
+// console.log(values);
 
-const newValues = values.slice(1, 2);
+// const newValues = values.slice(1, 2);
 
-console.log(newValues); 
+// console.log(newValues); 
 
-values.splice (1, 1);
+// values.splice (1, 1);
 
-console.log(values); 
+// console.log(values); 
 
-console.log(values.indexOf("c"));
-console.log(values.indexOf("d"));
+// console.log(values.indexOf("c"));
+// console.log(values.indexOf("d"));
 
-const set = values.filter(function(item) {
-  return item > "b";
-});
+// const set = values.filter(function(item) {
+//   return item > "b";
+// });
 
-console.log(set);
+// console.log(set);
 
-const found = values.find(function(item) {
-  return item.length > 1;
-});
+// const found = values.find(function(item) {
+//   return item.length > 1;
+// });
 
-console.log(found);
+// console.log(found);
 
-values.forEach(function(item) {
-  console.log(item);
-});
+// values.forEach(function(item) {
+//   console.log(item);
+// });
 
-const containers = document.getElementsByClassName("container");
+// const containers = document.getElementsByClassName("container");
+// containers[3].classList.add("d-none");
+// console.log(containers); 
 
-console.log(containers); 
+// ## End Array ##
+// ## Start Scope and Hoisting ##
+
+// const app = {
+//   productId: 12345,
+//   userName: "Joe",
+//   orderNumber: 789;
+// };
+
+function showProductId() {
+  let productId = 12345;
+  
+  function fix() {
+    let productId = 45678;
+    console.log("in fix: ", productId);
+  }
+  console.log("in showPorductId: ", productId);
+}
+
+showProductId();
+
+// ## End Scope and Hoisting ##
